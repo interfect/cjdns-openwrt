@@ -6,9 +6,10 @@ Index: cjdns-HEAD/node_build/make.js
          builder.config.includeDirs.push(
              BUILDDIR+'/dependencies/libuv/include/'
          );
-+	builder.config.cflags.push(
-+	    '-fno-stack-protector'
-+	);
-         Fs.exists(BUILDDIR+'/dependencies/libuv/out/Release/libuv.a', waitFor(function (exists) {
-             if (exists) { return; }
-             console.log("Build Libuv");
++        builder.config.cflags.push(
++            '-fno-stack-protector'
++        );
+         var libuvBuilt;
+         var python;
+         nThen(function (waitFor) {
+         
